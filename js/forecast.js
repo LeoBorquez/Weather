@@ -26,10 +26,12 @@ const getWeather = async (id) => {
 };
 
 // first get cuty then data weather via data.Key then log the data
+/* 
 getCity('miami').then(data => {
     return getWeather(data.Key);
 }).then(data => {
     console.log(data)
 })
 .catch(err => console.log(err));
+*/
 
