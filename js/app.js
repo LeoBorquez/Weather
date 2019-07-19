@@ -52,14 +52,14 @@ const updateUI = (data) => {
     // update night/day & icon images
 
     const iconSource = `img/icons/${weather.WeatherIcon}.svg`;
-    icon.setAttribute('src', iconSource);
+    icon  .setAttribute('src', iconSource);
 
-    let timeSource = null;
-    if(weather.IsDayTime){
+    let timeSource = weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
+    /* if(weather.IsDayTime){
         timeSource = 'img/day.svg';
     } else {
         timeSource = 'img/night.svg';
-    }
+    } */
     time.setAttribute('src', timeSource);
 
     // remove d-none class 
