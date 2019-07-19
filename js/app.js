@@ -1,5 +1,16 @@
 const cityForm = document.querySelector('form');
 
+const updateCity = async (city) => {
+
+    const cityDetails = await getCity(city);
+    const weather = await getWeather(cityDetails.Key);
+
+    return {
+        cityDetails : cityDetails, //const equal object property
+        weather: weather
+    };
+};
+
 cityForm.addEventListener('submit', e => {
     // prevent default action
     e.preventDefault();
